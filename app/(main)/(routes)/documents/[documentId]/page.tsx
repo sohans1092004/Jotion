@@ -14,10 +14,8 @@ interface DocumentIdPageProps{
         documentId: Id<"documents">;
     }
 }
- 
-export const DocumentIdPage = ({
-    params
-}:DocumentIdPageProps) => {
+
+export default function DocumentIdPage ({params}:DocumentIdPageProps) {
     const Editor = useMemo(() => dynamic(() => import("@/components/editor"), {ssr: false}),[])
     const document = useQuery(api.documents.getById,{
         documentId: params.documentId
@@ -65,5 +63,3 @@ export const DocumentIdPage = ({
         </div>
      );
 }
- 
-export default DocumentIdPage;
