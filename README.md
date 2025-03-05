@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project involves building "Jotion," a Notion-inspired web application. It includes features like authentication, responsive design, collapsible/resizable sidebar, dynamic light/dark mode, and real-time database integration.
 
-## Getting Started
+Landing Page
+Features:
 
-First, run the development server:
+Light/Dark mode toggle integrated with next-themes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Dynamic images and icons based on theme.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+User authentication via Clerk (GitHub login).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Components:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Heading: Displays app name and description.
 
-## Learn More
+Hero Section: Showcases images dynamically based on theme.
 
-To learn more about Next.js, take a look at the following resources:
+Footer: Includes links for privacy policy and terms.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Backend Setup
+Convex Integration:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Installed Convex for real-time database functionality.
 
-## Deploy on Vercel
+Configured Convex with Clerk JWT templates for secure authentication.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Environment Variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Added Convex deployment ID and Clerk keys for secure communication.
+
+Protected Pages
+Created /documents page accessible only to authenticated users.
+
+Implemented layout-level authentication checks using useConvexAuth and redirect.
+
+Navigation Sidebar
+Developed a collapsible/resizable sidebar with smooth animations using Tailwind CSS and JavaScript refs.
+
+Sidebar behavior adapts to screen size (mobile vs. desktop).
+
+Includes user profile and sign-out functionality.
+
+Empty State for Documents Page
+Designed an empty state with dynamic images (light/dark mode) and a button to create the first note.
+
+Personalized greeting based on the logged-in user's name.
+
+Responsive Design
+Ensured responsiveness across devices using Tailwind breakpoints and media queries.
+
+Sidebar dynamically adjusts its width based on user interaction or screen size.
+
+Light/Dark Mode
+Integrated next-themes for theme toggling.
+
+Added dynamic logos and images based on the current theme.
+
+Real-Time Features
+Used Convex to enable real-time updates for creating notes, renaming them, adding icons, cover images, and embedding content like text, images, lists, etc.
+
+Future Features
+The app is set up for further development, including adding functionality to manage documents and advanced collaboration features.
