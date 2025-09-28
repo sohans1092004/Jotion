@@ -40,7 +40,13 @@ export const Cover = ({
             url && "bg-muted"
         )}>
             {!!url && (
-                <Image src={url} fill alt="Cover" className="object-cover"/>
+                <Image 
+                    src={url} 
+                    fill 
+                    alt="Cover" 
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             )}
             {url && !preview && (
                 <div className="opacity-0 group-hover:opacity-100 absolute bottom-5 right-5 flex items-center gap-x-2">
