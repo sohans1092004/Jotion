@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { UploadCloudIcon, X } from 'lucide-react';
@@ -454,5 +453,4 @@ function formatFileSize(bytes?: number) {
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
 }
 
->>>>>>> 064f89812d1a2add5c522b8832b88f37eada72ce
 export { SingleImageDropzone };
